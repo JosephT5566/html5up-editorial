@@ -14,8 +14,8 @@ function App() {
                 <Suspense fallback={null}>
                     <View />
                 </Suspense>
+                <Sidebar />
             </Router>
-            <Sidebar />
         </div>
     );
 }
