@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigation } from 'react-navi';
 
+import Submenu from '../Submenu';
+
 export default function Menu() {
     const navigation = useNavigation();
     return (
@@ -16,21 +18,22 @@ export default function Menu() {
                     <a onClick={() => navigation.navigate('/generic')}>Generic</a>
                 </li>
                 <li>
-                    <span className="opener">Submenu</span>
-                    <ul>
-                        <li>
-                            <a href="#">Lorem Dolor</a>
-                        </li>
-                        <li>
-                            <a href="#">Ipsum Adipiscing</a>
-                        </li>
-                        <li>
-                            <a href="#">Tempus Magna</a>
-                        </li>
-                        <li>
-                            <a href="#">Feugiat Veroeros</a>
-                        </li>
-                    </ul>
+                    <Submenu label="Submenu">
+                        <ul>
+                            <li>
+                                <a href="#">Lorem Dolor</a>
+                            </li>
+                            <li>
+                                <a href="#">Ipsum Adipiscing</a>
+                            </li>
+                            <li>
+                                <a href="#">Tempus Magna</a>
+                            </li>
+                            <li>
+                                <a href="#">Feugiat Veroeros</a>
+                            </li>
+                        </ul>
+                    </Submenu>
                 </li>
             </ul>
         </nav>
