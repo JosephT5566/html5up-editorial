@@ -5,14 +5,14 @@ import Header from '../../components/Header';
 export default function Generic() {
     return (
         <div id="main">
-            <div class="inner">
+            <div className="inner">
                 <Header />
                 <section>
-                    <header class="main">
+                    <header className="main">
                         <h1>Generic</h1>
                     </header>
 
-                    <span class="image main">
+                    <span className="image main">
                         <img src="images/pic11.jpg" alt="" />
                     </span>
 
@@ -40,7 +40,7 @@ export default function Generic() {
                         elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
                     </p>
 
-                    <hr class="major" />
+                    <hr className="major" />
 
                     <h2>Interdum sed dapibus</h2>
                     <p>
@@ -65,7 +65,7 @@ export default function Generic() {
                         elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
                     </p>
 
-                    <hr class="major" />
+                    <hr className="major" />
 
                     <h2>Magna etiam veroeros</h2>
                     <p>
@@ -84,7 +84,7 @@ export default function Generic() {
                         elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
                     </p>
 
-                    <hr class="major" />
+                    <hr className="major" />
 
                     <h2>Lorem aliquam bibendum</h2>
                     <p>
