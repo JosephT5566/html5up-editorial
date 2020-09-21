@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Search from '../Search';
 import Menu from '../Menu';
 import Footer from '../Footer';
 
 export default function Sidebar() {
+    const [className, setClassName] = useState('');
+    const theme = useTheme();
+    const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
+
+    const onClickTogglePanel = () => {
+        if (className === '') {
+            setClassName('inactive');
+        } else if (className !== '') {
+            setClassName('');
+        }
+    };
+
+    useEffect(() => {
+        if (isLarge) {
+            setClassName('');
+        } else if (!isLarge) {
+            setClassName('inactive');
+        }
+    }, [isLarge]);
+
     return (
-        <div id="sidebar">
+        <div id="sidebar" className={className}>
+            <a className="toggle" onClick={onClickTogglePanel}></a>
             <div className="inner">
                 <Search />
                 <Menu />
